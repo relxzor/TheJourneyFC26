@@ -1,0 +1,83 @@
+/* ==================== livingmedia.css ==================== */
+.media-main {
+    padding: 1.5rem 2rem 2rem;
+}
+.page-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-title i {
+    color: var(--green-bright);
+}
+.media-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.media-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.news-item {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+.news-item .news-date {
+    color: var(--text-muted);
+    font-size: 0.65rem;
+}
+.social-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.social-post {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    padding: 10px;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+.social-post strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 4px;
+}
+.social-meta {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    display: block;
+}
+.no-data {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.action-hint {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}

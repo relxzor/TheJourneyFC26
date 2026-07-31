@@ -1,0 +1,348 @@
+<!-- ==================== index.html ==================== -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE JOURNEY — Football Career Mode Simulator | FC26</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== GLOBAL NAVIGATION ==================== -->
+    <nav class="global-nav" id="globalNav">
+        <a href="index.html" class="nav-brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-futbol"></i>
+            </div>
+            <div class="brand-text">THE <span>JOURNEY</span></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="training.html"><i class="fa-solid fa-dumbbell"></i> Training</a></li>
+            <li><a href="match.html"><i class="fa-solid fa-futbol"></i> Match Centre</a></li>
+            <li><a href="transfer.html"><i class="fa-solid fa-arrows-rotate"></i> Transfers</a></li>
+            <li><a href="finance.html"><i class="fa-solid fa-wallet"></i> Finances</a></li>
+            <li><a href="media.html"><i class="fa-solid fa-newspaper"></i> Media</a></li>
+            <li><a href="career.html"><i class="fa-solid fa-trophy"></i> Career</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="btn-nav btn-nav-outline" id="btnResetCareer" title="Reset Career">
+                <i class="fa-solid fa-arrow-rotate-left"></i> Reset
+            </button>
+            <a href="dashboard.html" class="btn-nav btn-nav-primary" id="btnStartCareer">
+                <i class="fa-solid fa-play"></i> Start Career
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-badge">
+                <i class="fa-solid fa-star"></i> LEGENDARY++ DIFFICULTY
+            </div>
+            <h1 class="hero-title">THE JOURNEY</h1>
+            <p class="hero-subtitle">Ultimate Browser Football Career Mode Simulator — FC26-Level Realism</p>
+            <div class="difficulty-tag">
+                <i class="fa-solid fa-skull"></i> HARDER THAN FOOTBALL MANAGER &amp; FC26 COMBINED
+            </div>
+            <div class="hero-stats-row">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">80+</span>
+                    <span class="hero-stat-label">Attributes</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">200+</span>
+                    <span class="hero-stat-label">Countries</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">200+</span>
+                    <span class="hero-stat-label">Trophies</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">∞</span>
+                    <span class="hero-stat-label">Possibilities</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAYER CREATION FORM -->
+        <section class="creation-container" id="creationForm">
+            <div class="creation-container-top-line"></div>
+            <div class="creation-header">
+                <div class="creation-header-icon">
+                    <i class="fa-solid fa-user-pen"></i>
+                </div>
+                <h2>Create Your Player</h2>
+                <p>Every detail matters. Your journey starts here — age 15, local academy, zero reputation.</p>
+            </div>
+
+            <!-- Selected Academy Logo Display -->
+            <div class="academy-logo-display" id="academyLogoDisplay">
+                <img
+                id="academyLogoImg"
+                src=""
+                alt="Academy Logo"
+                class="academy-logo-img"
+                onerror="this.style.display='none'; document.getElementById('academyLogoFallback').style.display='flex';"
+                >
+                <div class="academy-logo-fallback" id="academyLogoFallback" style="display:flex;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="academy-logo-label" id="academyLogoLabel">Select an academy</span>
+            </div>
+
+            <form id="playerForm" novalidate>
+                <div class="form-grid">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-signature"></i> Full Name</label>
+                        <input type="text" id="playerName" placeholder="e.g. James Carter" required minlength="3" maxlength="40" autocomplete="off">
+                        <span class="form-hint">Your football identity</span>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-globe"></i> Nationality</label>
+                        <select id="playerNationality" required>
+                            <option value="">— Select Nationality —</option>
+                            <option value="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</option>
+                            <option value="France">🇫🇷 France</option>
+                            <option value="Germany">🇩🇪 Germany</option>
+                            <option value="Spain">🇪🇸 Spain</option>
+                            <option value="Italy">🇮🇹 Italy</option>
+                            <option value="Netherlands">🇳🇱 Netherlands</option>
+                            <option value="Portugal">🇵🇹 Portugal</option>
+                            <option value="Belgium">🇧🇪 Belgium</option>
+                            <option value="Brazil">🇧🇷 Brazil</option>
+                            <option value="Argentina">🇦🇷 Argentina</option>
+                            <option value="Uruguay">🇺🇾 Uruguay</option>
+                            <option value="Colombia">🇨🇴 Colombia</option>
+                            <option value="Nigeria">🇳🇬 Nigeria</option>
+                            <option value="Senegal">🇸🇳 Senegal</option>
+                            <option value="Ghana">🇬🇭 Ghana</option>
+                            <option value="Ivory Coast">🇨🇮 Ivory Coast</option>
+                            <option value="Egypt">🇪🇬 Egypt</option>
+                            <option value="Morocco">🇲🇦 Morocco</option>
+                            <option value="Japan">🇯🇵 Japan</option>
+                            <option value="South Korea">🇰🇷 South Korea</option>
+                            <option value="Australia">🇦🇺 Australia</option>
+                            <option value="USA">🇺🇸 United States</option>
+                            <option value="Mexico">🇲🇽 Mexico</option>
+                            <option value="Croatia">🇭🇷 Croatia</option>
+                            <option value="Serbia">🇷🇸 Serbia</option>
+                            <option value="Norway">🇳🇴 Norway</option>
+                            <option value="Sweden">🇸🇪 Sweden</option>
+                            <option value="Denmark">🇩🇰 Denmark</option>
+                            <option value="Scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</option>
+                            <option value="Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</option>
+                            <option value="Other">🌍 Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Position -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-shirt"></i> Primary Position</label>
+                        <select id="playerPosition" required>
+                            <option value="">— Select Position —</option>
+                            <option value="GK">GK — Goalkeeper</option>
+                            <option value="CB">CB — Centre-Back</option>
+                            <option value="LB">LB — Left-Back</option>
+                            <option value="RB">RB — Right-Back</option>
+                            <option value="CDM">CDM — Defensive Midfielder</option>
+                            <option value="CM">CM — Central Midfielder</option>
+                            <option value="CAM">CAM — Attacking Midfielder</option>
+                            <option value="LM">LM — Left Midfielder</option>
+                            <option value="RM">RM — Right Midfielder</option>
+                            <option value="LW">LW — Left Winger</option>
+                            <option value="RW">RW — Right Winger</option>
+                            <option value="ST">ST — Striker</option>
+                            <option value="CF">CF — Centre Forward</option>
+                        </select>
+                    </div>
+
+                    <!-- Preferred Foot -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-shoe-prints"></i> Preferred Foot</label>
+                        <select id="playerFoot" required>
+                            <option value="">— Select —</option>
+                            <option value="Right">Right Foot</option>
+                            <option value="Left">Left Foot</option>
+                        </select>
+                    </div>
+
+                    <!-- Height -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-ruler-vertical"></i> Height (cm)</label>
+                        <input type="number" id="playerHeight" placeholder="e.g. 178" min="150" max="210" required>
+                    </div>
+
+                    <!-- Weight -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-weight-scale"></i> Weight (kg)</label>
+                        <input type="number" id="playerWeight" placeholder="e.g. 70" min="45" max="110" required>
+                    </div>
+
+                    <!-- City of Birth -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-city"></i> City of Birth</label>
+                        <input type="text" id="playerCity" placeholder="e.g. Manchester" required>
+                    </div>
+
+                    <!-- Starting Academy -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-school"></i> Local Academy</label>
+                        <select id="playerAcademy" required>
+                            <option value="">— Select Academy —</option>
+                            <option value="Manchester United Academy">Manchester United Academy</option>
+                            <option value="FC Barcelona La Masia">FC Barcelona — La Masia</option>
+                            <option value="Real Madrid Castilla">Real Madrid — Castilla</option>
+                            <option value="Bayern Munich Campus">FC Bayern Munich Campus</option>
+                            <option value="Ajax Amsterdam Academy">AFC Ajax Academy</option>
+                            <option value="Benfica Campus">SL Benfica Campus</option>
+                            <option value="Chelsea Academy">Chelsea FC Academy</option>
+                            <option value="Arsenal Hale End">Arsenal — Hale End</option>
+                            <option value="Paris Saint-Germain Academy">Paris Saint-Germain Academy</option>
+                            <option value="AC Milan Primavera">AC Milan Primavera</option>
+                            <option value="Sporting CP Academy">Sporting CP Academy</option>
+                            <option value="RB Salzburg Academy">RB Salzburg Academy</option>
+                            <option value="Santos FC Academy">Santos FC Academy</option>
+                            <option value="River Plate Academy">River Plate Academy</option>
+                            <option value="Local District Academy">🏠 Small Local District Academy</option>
+                        </select>
+                    </div>
+
+                    <!-- Player Personality -->
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-brain"></i> Personality Type</label>
+                        <select id="playerPersonality">
+                            <option value="Professional">Professional &amp; Disciplined</option>
+                            <option value="Ambitious">Ambitious &amp; Driven</option>
+                            <option value="LaidBack">Laid Back &amp; Relaxed</option>
+                            <option value="HotHeaded">Hot-Headed &amp; Aggressive</option>
+                            <option value="Shy">Shy &amp; Reserved</option>
+                            <option value="Charismatic">Charismatic &amp; Outgoing</option>
+                        </select>
+                    </div>
+
+                    <!-- Starting OVR Preview -->
+                    <div class="form-group full-width">
+                        <label><i class="fa-solid fa-chart-simple"></i> Estimated Starting Attributes</label>
+                        <div class="attribute-preview" id="attrPreview">
+                            <div class="attr-row">
+                                <span>Overall Rating</span>
+                                <div class="attr-bar"><div class="attr-bar-fill" id="ovrBar" style="width:45%;"></div></div>
+                                <span class="attr-value" id="ovrValue">45</span>
+                            </div>
+                            <div class="attr-row">
+                                <span>Pace</span>
+                                <div class="attr-bar"><div class="attr-bar-fill" style="width:48%;"></div></div>
+                                <span class="attr-value">48</span>
+                            </div>
+                            <div class="attr-row">
+                                <span>Ball Control</span>
+                                <div class="attr-bar"><div class="attr-bar-fill" style="width:42%;"></div></div>
+                                <span class="attr-value">42</span>
+                            </div>
+                            <div class="attr-row">
+                                <span>Stamina</span>
+                                <div class="attr-bar"><div class="attr-bar-fill" style="width:40%;"></div></div>
+                                <span class="attr-value">40</span>
+                            </div>
+                            <div class="attr-row">
+                                <span>Potential</span>
+                                <div class="attr-bar"><div class="attr-bar-fill potential-bar" style="width:75%;"></div></div>
+                                <span class="attr-value potential-value">★★★☆</span>
+                            </div>
+                        </div>
+                        <p class="attr-info-text">
+                            <i class="fa-solid fa-circle-info"></i> Starting OVR between 42–50. Progression is extremely slow and requires discipline.
+                        </p>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="btnRandomise">
+                            <i class="fa-solid fa-shuffle"></i> Randomise Player
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="btnCreatePlayer">
+                            <i class="fa-solid fa-play"></i> Begin The Journey
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
+            <h2 class="section-title">What Awaits <span>You</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>80+ Player Attributes</h3>
+                    <p>Every attribute matters. Acceleration, composure, decision-making, injury resistance — all simulated with brutal realism.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-earth-europe"></i></div>
+                    <h3>200+ Countries Database</h3>
+                    <p>Thousands of clubs, leagues, and competitions. From local district leagues to the FIFA World Cup and Ballon d'Or.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-newspaper"></i></div>
+                    <h3>Living Media System</h3>
+                    <p>Dynamic headlines, social media reactions, sponsor opinions, and fan sentiment that evolve with every match.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+                    <h3>Realistic Injuries</h3>
+                    <p>ACL tears, hamstring ruptures, stress fractures. Recovery takes weeks to months. Repeated injuries lower attributes permanently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-coins"></i></div>
+                    <h3>Full Financial System</h3>
+                    <p>Salary, taxes, investments, luxury purchases, family support. Poor financial decisions lead to bankruptcy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h3>200+ Trophies</h3>
+                    <p>From local cups to the Champions League, World Cup, and multiple Ballon d'Or awards. Only the greatest achieve them all.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="global-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 THE JOURNEY — Ultimate Football Career Simulator. No shortcuts. No scripted success. No plot armour.</p>
+            <p class="footer-difficulty">LEGENDARY++ DIFFICULTY</p>
+        </div>
+    </footer>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

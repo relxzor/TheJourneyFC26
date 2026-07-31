@@ -1,0 +1,76 @@
+/* ==================== financial.css ==================== */
+.financial-main {
+    padding: 1.5rem 2rem 2rem;
+}
+.page-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-title i {
+    color: var(--green-bright);
+}
+.fin-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.fin-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+.balance-display {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--green-bright);
+    text-align: center;
+    padding: 1rem;
+}
+.income-list,
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.income-item,
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+.income-item span:last-child {
+    color: var(--green-bright);
+    font-weight: 600;
+}
+.expense-item span:last-child {
+    color: var(--accent-red);
+    font-weight: 600;
+}
+.assets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.no-data {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+}

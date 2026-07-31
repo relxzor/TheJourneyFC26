@@ -1,0 +1,149 @@
+<!-- ==================== career.html (UPDATED) ==================== -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career — THE JOURNEY | FC26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="career.css">
+</head>
+<body>
+
+    <nav class="global-nav" id="globalNav">
+        <a href="index.html" class="nav-brand">
+            <div class="brand-icon"><i class="fa-solid fa-futbol"></i></div>
+            <div class="brand-text">THE <span>JOURNEY</span></div>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="training.html"><i class="fa-solid fa-dumbbell"></i> Training</a></li>
+            <li><a href="transfer.html"><i class="fa-solid fa-arrows-rotate"></i> Transfers</a></li>
+            <li><a href="financial.html"><i class="fa-solid fa-wallet"></i> Finances</a></li>
+            <li><a href="livingmedia.html"><i class="fa-solid fa-newspaper"></i> Media</a></li>
+            <li><a href="sponsor.html"><i class="fa-solid fa-handshake"></i> Sponsors</a></li>
+            <li><a href="equipment.html"><i class="fa-solid fa-boot"></i> Equipment</a></li>
+            <li><a href="roleplay.html"><i class="fa-solid fa-map-location-dot"></i> Open World</a></li>
+            <li><a href="career.html" class="active"><i class="fa-solid fa-trophy"></i> Career</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="dashboard.html" class="btn-nav btn-nav-primary"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="main-content career-main">
+        <h1 class="page-title"><i class="fa-solid fa-trophy"></i> Career Hub</h1>
+
+        <!-- Player Overview -->
+        <section class="career-card player-overview-card">
+            <div class="player-overview">
+                <div class="overview-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="overview-info">
+                    <h2 id="careerPlayerName">—</h2>
+                    <div class="overview-meta">
+                        <span class="meta-badge" id="careerPosition">—</span>
+                        <span class="meta-badge" id="careerAge">Age: —</span>
+                        <span class="meta-badge" id="careerNationality">—</span>
+                        <span class="meta-badge" id="careerOVR">OVR: —</span>
+                    </div>
+                    <div class="overview-club">
+                        <img id="careerClubLogo" src="" alt="" class="club-logo-sm" onerror="this.style.display='none';">
+                        <span id="careerClub">—</span>
+                    </div>
+                </div>
+                <div class="overview-stats">
+                    <div class="stat-box"><span class="stat-number" id="careerMatches">0</span><span class="stat-label">Matches</span></div>
+                    <div class="stat-box"><span class="stat-number" id="careerGoals">0</span><span class="stat-label">Goals</span></div>
+                    <div class="stat-box"><span class="stat-number" id="careerAssists">0</span><span class="stat-label">Assists</span></div>
+                    <div class="stat-box"><span class="stat-number" id="careerTrophies">0</span><span class="stat-label">Trophies</span></div>
+                    <div class="stat-box"><span class="stat-number" id="careerCleanSheets">0</span><span class="stat-label">Clean Sheets</span></div>
+                    <div class="stat-box"><span class="stat-number" id="careerMOTM">0</span><span class="stat-label">MOTM</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Match & Simulate -->
+        <section class="career-card next-match-card">
+            <h3 class="card-title"><i class="fa-solid fa-calendar-day"></i> Next Match</h3>
+            <div id="nextMatchContainer">
+                <div class="match-info">
+                    <div class="match-teams">
+                        <div class="team home">
+                            <img id="homeLogo" src="" alt="Home" class="team-logo" onerror="this.style.display='none';">
+                            <span id="homeTeam">—</span>
+                        </div>
+                        <div class="match-vs">vs</div>
+                        <div class="team away">
+                            <img id="awayLogo" src="" alt="Away" class="team-logo" onerror="this.style.display='none';">
+                            <span id="awayTeam">—</span>
+                        </div>
+                    </div>
+                    <div class="match-details">
+                        <span id="matchDate">—</span>
+                        <span id="matchVenue">—</span>
+                        <span id="matchLeague">—</span>
+                    </div>
+                </div>
+                <div class="match-actions">
+                    <button class="btn btn-primary" id="btnSimulateMatch"><i class="fa-solid fa-futbol"></i> Simulate Match</button>
+                    <button class="btn btn-secondary" id="btnSkipMatch"><i class="fa-solid fa-forward"></i> Skip Week</button>
+                </div>
+                <div class="opponent-info" id="opponentInfo">
+                    <!-- populated by JS -->
+                </div>
+            </div>
+            <!-- Match Result Display -->
+            <div id="matchResultContainer" style="display: none; margin-top: 1.5rem;">
+                <div id="matchResult" class="match-result-card">
+                    <!-- will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Results -->
+        <section class="career-card recent-results-card">
+            <h3 class="card-title"><i class="fa-solid fa-list-ol"></i> Recent Results</h3>
+            <div id="recentResults" class="recent-results"></div>
+        </section>
+
+        <!-- Career Timeline -->
+        <section class="career-card timeline-card">
+            <h3 class="card-title"><i class="fa-solid fa-timeline"></i> Career Timeline</h3>
+            <div id="careerTimeline" class="timeline-list"></div>
+        </section>
+
+        <!-- Trophy Cabinet -->
+        <section class="career-card trophy-cabinet-card">
+            <h3 class="card-title"><i class="fa-solid fa-trophy"></i> Trophy Cabinet</h3>
+            <div id="trophyCabinet" class="trophy-grid"></div>
+        </section>
+
+        <!-- Season Stats -->
+        <section class="career-card season-stats-card">
+            <h3 class="card-title"><i class="fa-solid fa-chart-line"></i> Season Statistics</h3>
+            <div id="seasonStats" class="season-stats"></div>
+        </section>
+    </main>
+
+    <footer class="global-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 THE JOURNEY — Ultimate Football Career Simulator.</p>
+            <p class="footer-difficulty">LEGENDARY++ DIFFICULTY</p>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="script.js"></script>
+    <script src="career.js"></script>
+</body>
+</html>

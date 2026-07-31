@@ -1,0 +1,104 @@
+/* ==================== training.css ==================== */
+.training-main {
+    padding: 1.5rem 2rem 2rem;
+}
+.page-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-title i {
+    color: var(--green-bright);
+}
+.training-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.training-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+.drills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+}
+.drill-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+.drill-card:hover {
+    border-color: var(--green-border-hover);
+    box-shadow: var(--green-glow-sm);
+    transform: translateY(-2px);
+}
+.drill-card i {
+    font-size: 1.5rem;
+    color: var(--green-bright);
+    margin-bottom: 8px;
+    display: block;
+}
+.drill-card .drill-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+.drill-card .drill-effect {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+.drill-card .drill-cost {
+    font-size: 0.65rem;
+    color: var(--accent-orange);
+    margin-top: 6px;
+    font-weight: 600;
+}
+.progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.progress-item {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.progress-item span {
+    color: var(--green-bright);
+    font-weight: 600;
+}
+.coach-feedback {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    font-style: italic;
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+}
+.no-data {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+}

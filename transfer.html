@@ -1,0 +1,95 @@
+<!-- ==================== transfer.html ==================== -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Hub — THE JOURNEY | FC26</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="transfer.css">
+</head>
+<body>
+
+    <nav class="global-nav" id="globalNav">
+        <a href="index.html" class="nav-brand">
+            <div class="brand-icon"><i class="fa-solid fa-futbol"></i></div>
+            <div class="brand-text">THE <span>JOURNEY</span></div>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="training.html"><i class="fa-solid fa-dumbbell"></i> Training</a></li>
+            <li><a href="transfer.html" class="active"><i class="fa-solid fa-arrows-rotate"></i> Transfers</a></li>
+            <li><a href="financial.html"><i class="fa-solid fa-wallet"></i> Finances</a></li>
+            <li><a href="livingmedia.html"><i class="fa-solid fa-newspaper"></i> Media</a></li>
+            <li><a href="sponsor.html"><i class="fa-solid fa-handshake"></i> Sponsors</a></li>
+            <li><a href="equipment.html"><i class="fa-solid fa-boot"></i> Equipment</a></li>
+            <li><a href="roleplay.html"><i class="fa-solid fa-map-location-dot"></i> Open World</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="dashboard.html" class="btn-nav btn-nav-primary"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="main-content transfer-main">
+        <h1 class="page-title"><i class="fa-solid fa-arrows-rotate"></i> Transfer Hub</h1>
+
+        <!-- Current Contract -->
+        <section class="transfer-card contract-card">
+            <h3>Current Contract</h3>
+            <div class="contract-details" id="contractDetails">
+                <div class="contract-row"><span>Club</span><strong id="txClub">—</strong></div>
+                <div class="contract-row"><span>Contract Length</span><strong id="txContract">—</strong></div>
+                <div class="contract-row"><span>Weekly Salary</span><strong id="txSalary">—</strong></div>
+                <div class="contract-row"><span>Market Value</span><strong id="txValue">—</strong></div>
+                <div class="contract-row"><span>Release Clause</span><strong id="txClause">—</strong></div>
+                <div class="contract-row"><span>Agent</span><strong id="txAgent">—</strong></div>
+            </div>
+        </section>
+
+        <!-- Club Interest -->
+        <section class="transfer-card interest-card">
+            <h3>Club Interest</h3>
+            <div class="interest-list" id="interestList">
+                <p class="no-data">No clubs currently tracking you. Perform better to attract interest.</p>
+            </div>
+        </section>
+
+        <!-- Transfer Market -->
+        <section class="transfer-card market-card">
+            <h3>Transfer Market Rumours</h3>
+            <div class="market-list" id="marketList">
+                <p class="no-data">No transfer rumours at this time.</p>
+            </div>
+        </section>
+
+        <!-- Request Transfer -->
+        <section class="transfer-card action-card">
+            <h3>Actions</h3>
+            <button class="btn btn-primary" id="btnRequestTransfer" disabled>
+                <i class="fa-solid fa-paper-plane"></i> Request Transfer
+            </button>
+            <p class="action-hint">You need at least 1 season of consistent performance before requesting a transfer.</p>
+        </section>
+    </main>
+
+    <footer class="global-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 THE JOURNEY — Ultimate Football Career Simulator.</p>
+            <p class="footer-difficulty">LEGENDARY++ DIFFICULTY</p>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <script src="transfer.js"></script>
+</body>
+</html>
